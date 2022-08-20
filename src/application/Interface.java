@@ -20,16 +20,19 @@ public class Interface {
 		// BARRA DE PESQUISA
     	Button back = new Button("", new ImageView("/resources/back.png"));
     	Button reload = new Button("", new ImageView("/resources/reload.png"));
+    	Button home = new Button("", new ImageView("/resources/home.png"));
     	TextField urlBar = new TextField();
     	Button settings = new Button("", new ImageView("/resources/settings.png"));
     	
     	back.setMinSize(30, 30);
     	reload.setMinSize(30, 30);
+    	home.setMinSize(30, 30);
     	urlBar.setMinHeight(30);
     	settings.setMinHeight(30);
     	
     	reload.getStyleClass().add("botoes-navbar");
     	back.getStyleClass().add("botoes-navbar");
+    	home.getStyleClass().add("botoes-navbar");
     	urlBar.getStyleClass().add("urlbar");
     	settings.getStyleClass().add("botoes-navbar");
     	
@@ -43,6 +46,12 @@ public class Interface {
     	reload.setOnAction(new EventHandler<ActionEvent>() {
     	    @Override public void handle(ActionEvent e) {
     	    	browser.getEngine().reload();
+    	    }
+    	});
+    	
+    	home.setOnAction(new EventHandler<ActionEvent>() {
+    	    @Override public void handle(ActionEvent e) {
+    	    	browser.getEngine().load(this.getClass().getResource("/resources/novaguia.html").toString());
     	    }
     	});
     	
@@ -73,7 +82,7 @@ public class Interface {
     	    }
     	});
     
-    	navbarBox.getChildren().addAll(back,reload,urlBar,settings);
+    	navbarBox.getChildren().addAll(back,reload,home,urlBar,settings);
     	navbarBox.setHgrow(urlBar, Priority.ALWAYS);
     	navbarBox.setSpacing(5);
     	navbarBox.getStyleClass().add("navbar");

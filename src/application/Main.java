@@ -27,7 +27,7 @@ public class Main extends Application {
     	VBox vBox = new VBox(classInterface.getNavbarBox(), classEngine.getBrowser());
     	vBox.setVgrow(classEngine.getBrowser(), Priority.ALWAYS);
     	Scene scene = new Scene(vBox, 800, 500);
-    	scene.getStylesheets().add(getClass().getResource("primaryStageStyle.css").toExternalForm());
+    	scene.getStylesheets().add(getClass().getResource("primarySceneStyle.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.setTitle("Godzilla Giroflex");
         primaryStage.show();

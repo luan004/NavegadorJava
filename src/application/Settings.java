@@ -23,7 +23,7 @@ public class Settings {
     	optionFavorites.getStyleClass().add("checkBox");
     	
     	Scene settingsScene = new Scene(settingsBox, 300, 400);
-    	settingsScene.getStylesheets().add(getClass().getResource("settingsStageStyle.css").toExternalForm());
+    	settingsScene.getStylesheets().add(getClass().getResource("settingsSceneStyle.css").toExternalForm());
     	settingsStage.setScene(settingsScene);
     	settingsStage.setTitle("Configurações");
     	settingsStage.show();

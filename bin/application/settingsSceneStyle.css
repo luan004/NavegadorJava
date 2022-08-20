@@ -13,19 +13,19 @@
 }
 
 .checkBox .box {
--fx-background-color: #212121;
--fx-border-color:white;
--fx-border-radius:3px; 
+	-fx-background-color: #212121;
+	-fx-border-color:white;
+	-fx-border-radius:3px; 
 
 }
 
 .checkBox:selected .mark {
 
--fx-background-color: white;
+	-fx-background-color: white;
 
 }
 
 .checkBox:selected .box {
 
--fx-background-color: #212121;
+	-fx-background-color: #212121;
 }
