@@ -32,6 +32,7 @@ public class Main extends Application {
     	classInterface.createInterface(classEngine.getBrowser());
 
     	VBox vBox = new VBox(classInterface.getNavbarBox(), classEngine.getBrowser());
+    	vBox.setVgrow(classEngine.getBrowser(), Priority.ALWAYS);
     	Scene scene = new Scene(vBox, 800, 500);
     	scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
         primaryStage.setScene(scene);

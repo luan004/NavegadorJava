@@ -18,32 +18,31 @@ public class Interface {
 	@SuppressWarnings("static-access")
 	public void createInterface(WebView browser) {
 		// BARRA DE PESQUISA
-    	Button voltar = new Button("", new ImageView("/resources/back.png"));
-    	Button recarregar = new Button("", new ImageView("/resources/reload.png"));
+    	Button back = new Button("", new ImageView("/resources/back.png"));
+    	Button reload = new Button("", new ImageView("/resources/reload.png"));
     	TextField urlBar = new TextField();
+    	Button settings = new Button("", new ImageView("/resources/settings.png"));
     	
-    	voltar.setMinSize(30, 30);
-    	recarregar.setMinSize(30, 30);
+    	back.setMinSize(30, 30);
+    	reload.setMinSize(30, 30);
     	urlBar.setMinHeight(30);
+    	settings.setMinHeight(30);
     	
-    	recarregar.getStyleClass().add("botoes-navbar");
-    	voltar.getStyleClass().add("botoes-navbar");
+    	reload.getStyleClass().add("botoes-navbar");
+    	back.getStyleClass().add("botoes-navbar");
     	urlBar.getStyleClass().add("urlbar");
+    	settings.getStyleClass().add("botoes-navbar");
     	
     	
-    	voltar.setOnAction(new EventHandler<ActionEvent>() {
+    	back.setOnAction(new EventHandler<ActionEvent>() {
     	    @Override public void handle(ActionEvent e) {
-    	        
     	    	browser.getEngine().executeScript("history.back()");
-    	    	
     	    }
     	});
     	
-    	recarregar.setOnAction(new EventHandler<ActionEvent>() {
+    	reload.setOnAction(new EventHandler<ActionEvent>() {
     	    @Override public void handle(ActionEvent e) {
-    	        
     	    	browser.getEngine().reload();
-    	    	
     	    }
     	});
     	
@@ -63,22 +62,22 @@ public class Interface {
         	    		browser.getEngine().load("https://www.google.com/search?q=" + urlBar.getText());
         	    		System.out.println("Pesquisa");
         	    	}
-        	    	
-        	    	urlBar.setText(browser.getEngine().getLocation());
-        	        
+        	    	urlBar.setText(browser.getEngine().getLocation()); 
     	        }
     	    }
     	});
-
     	
+    	settings.setOnAction(new EventHandler<ActionEvent>() {
+    	    @Override public void handle(ActionEvent e) {
+    	    	//openSettings();
+    	    }
+    	});
     
-    	navbarBox.getChildren().addAll(voltar,recarregar,urlBar);
+    	navbarBox.getChildren().addAll(back,reload,urlBar,settings);
     	navbarBox.setHgrow(urlBar, Priority.ALWAYS);
     	navbarBox.setSpacing(5);
     	navbarBox.getStyleClass().add("navbar");
 	}
-	
-	private void interfaceActions() {}
 
 	public HBox getNavbarBox() {
 		return navbarBox;
