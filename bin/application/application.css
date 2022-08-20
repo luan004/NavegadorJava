@@ -1,13 +1,21 @@
-.botoes {
-	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 0);
-	-fx-background-color: #e8e8e8;
-	-fx-background-radius:15px;
+.botoes-navbar {
+	-fx-background-color: #212121;
+	-fx-background-radius:12px;
+	-fx-transition:2ms;
+}
+
+.botoes-navbar:hover {
+	-fx-background-color:#121212;
 }
 
 .urlbar {
-	-fx-background-radius:15px;
-	-fx-background-color: #e8e8e8;
-	
+	-fx-background-radius:12px;
+	-fx-background-color: #121212;
 	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 1, 0, 0, 0);
-	
+	-fx-text-fill:white;
+}
+
+.navbar {
+	-fx-padding: 8px;
+	-fx-background-color: #212121;
 }
