@@ -1,7 +1,6 @@
 .botoes-navbar {
 	-fx-background-color: #212121;
 	-fx-background-radius:12px;
-	-fx-transition:2ms;
 }
 
 .botoes-navbar:hover {

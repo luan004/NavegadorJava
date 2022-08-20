@@ -66,10 +66,10 @@ public class Interface {
     	        }
     	    }
     	});
-    	
+    	Settings classSettings = new Settings();
     	settings.setOnAction(new EventHandler<ActionEvent>() {
     	    @Override public void handle(ActionEvent e) {
-    	    	//openSettings();
+    	    	classSettings.createSettings();
     	    }
     	});
     
