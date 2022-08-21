@@ -1,6 +1,6 @@
 # NavegadorJava
  Um navegador feito em JavaFx.
 
-![alt text](https://imgur.com/D6eOlsU)
+![alt text](https://i.imgur.com/D6eOlsU.png)
 
-![alt text](https://imgur.com/d8lCXev)
+![alt text](https://i.imgur.com/d8lCXev.png)
